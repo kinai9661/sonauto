@@ -1,0 +1,17 @@
+{
+  "name": "sonauto-proxy",
+  "version": "1.0.0",
+  "description": "Sonauto.ai API 中轉服務",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "kv:create": "wrangler kv:namespace create TASKS"
+  },
+  "keywords": ["sonauto", "cloudflare-workers", "music"],
+  "author": "kinai9661",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.78.0"
+  }
+}

@@ -1,0 +1,17 @@
+name = "sonauto-proxy"
+main = "src/index.js"
+compatibility_date = "2025-11-29"
+
+[env.production]
+name = "sonauto-proxy-prod"
+
+[[env.production.kv_namespaces]]
+binding = "TASKS"
+id = "YOUR_KV_ID"  # 需要替換
+
+[env.preview]
+name = "sonauto-proxy-preview"
+
+[[env.preview.kv_namespaces]]
+binding = "TASKS"
+id = "YOUR_PREVIEW_KV_ID"  # 需要替換
