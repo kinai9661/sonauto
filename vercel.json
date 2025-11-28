@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/api/generate",
+      "dest": "/api/generate.js"
+    },
+    {
+      "src": "/api/status",
+      "dest": "/api/status.js"
+    },
+    {
+      "src": "/api/result",
+      "dest": "/api/result.js"
+    },
+    {
+      "src": "/api/extend",
+      "dest": "/api/extend.js"
+    },
+    {
+      "src": "/api/inpaint",
+      "dest": "/api/inpaint.js"
+    },
+    {
+      "src": "/api/balance",
+      "dest": "/api/balance.js"
+    }
+  ],
+  "env": {
+    "SONAUTO_API_KEY": "@sonauto-api-key"
+  },
+  "functions": {
+    "api/**/*.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  }
+}
