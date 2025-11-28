@@ -1,11 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
       "src": "/",
@@ -36,9 +30,6 @@
       "dest": "/api/balance.js"
     }
   ],
-  "env": {
-    "SONAUTO_API_KEY": "@sonauto-api-key"
-  },
   "functions": {
     "api/**/*.js": {
       "memory": 1024,
