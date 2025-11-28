@@ -1,17 +1,35 @@
 {
   "name": "sonauto-proxy",
-  "version": "1.0.0",
-  "description": "Sonauto.ai API 中轉服務",
+  "version": "2.0.0",
+  "description": "Sonauto.ai API 中轉服務 - 支持 Cloudflare Workers 和 Vercel",
+  "type": "module",
   "main": "src/index.js",
   "scripts": {
     "dev": "wrangler dev",
+    "dev:vercel": "vercel dev",
     "deploy": "wrangler deploy",
+    "deploy:prod": "wrangler deploy --env production",
+    "deploy:vercel": "vercel --prod",
     "kv:create": "wrangler kv:namespace create TASKS"
   },
-  "keywords": ["sonauto", "cloudflare-workers", "music"],
+  "keywords": [
+    "sonauto",
+    "cloudflare-workers",
+    "vercel",
+    "serverless",
+    "music-generation",
+    "ai"
+  ],
   "author": "kinai9661",
   "license": "MIT",
+  "dependencies": {
+    "@vercel/kv": "^1.0.1"
+  },
   "devDependencies": {
-    "wrangler": "^3.78.0"
+    "wrangler": "^3.78.0",
+    "vercel": "^33.0.1"
+  },
+  "engines": {
+    "node": ">=18.x"
   }
 }
